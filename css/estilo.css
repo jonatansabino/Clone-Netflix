@@ -13,27 +13,49 @@ body{
      background: var(--preta);
      font-family: 'Times New Roman', Times, serif;
      color: white;
+     min-height: 100vh;
 }
 header .container{
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 10px;
+      padding: 25px;
 }
-header .logo{
-      margin-left: 20px;
+header #logo{
+      margin-left: 30px;
       color: var(--vermelho);
       font-family: 'Arial Black', Times;
-      font-size: 40px;
+      font-size: 50px;
 }
+
+.waviy {
+      display: flex;
+      margin-right: 10%;
+    }
+    .waviy span {
+      position: relative;
+      display: inline-block;
+      color: var(--vermelho);
+      animation: waviy 1s;
+      animation-delay: calc(.1s * var(--i));
+      
+    }
+    @keyframes waviy {
+      0%,40%,100% {
+        transform: translateY(0)
+      }
+      20% {
+        transform: translateY(-20px)
+      }
+    }
+
 header nav a{
       color: rgb(194, 192, 192);
       text-transform: uppercase;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 18px;
-      
+      margin-left: 15px;
+      font-size: 18px;      
 }
 header nav a:hover{
       color: #fff;      
@@ -43,7 +65,7 @@ header nav a:hover{
 
 .filme-principal{
       font-size: 18px;
-      background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(../img/capa.jpg);
+      background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(../img/supernatural-capa.jpg);
       height: 95%;
       width: 100%;
       padding-bottom: 2%;
@@ -67,14 +89,15 @@ header nav a:hover{
       margin-left: 10px;
       font-size: 16px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      opacity: 80%;
 }
 
 .botoes .botao{
-      background-color: whitesmoke;
+      background-color: rgb(240, 236, 236);
       border:none;
       color: black;
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 5px;
       margin-left: 10px;
       margin-right: 35px;
       margin-top: 10px;
@@ -84,16 +107,67 @@ header nav a:hover{
 
 .botao:hover{
       cursor: pointer;
-      background-color: #e71c27;
+      border: 1px solid rgb(158, 156, 156);
+      background-color: #e9101b;
       color: white;
       transform: scale(1.05);
       font-weight: 550;
+     
+}
+.botao2{
+      padding: 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-right: 35px;
+      width: 20%;
+      opacity: 75%;
+}
+.botao2:hover{
+      opacity: 100%;
+      cursor: pointer;
+      border: 1px solid white;
+      background-color:rgb(235, 233, 233);
+      transform: scale(1.05);    
+}
+
+button img{
+      width: 20px;
 }
 
 .container{
       margin-left: 20px;
+      padding-bottom: 20%;
 }
 
 .filme-principal .container{
       width: 85%;
 }
+
+.carrosel-filmes{
+      margin-top: 1%;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+}
+div span{
+      display: none;
+}
+/*
+#busca{
+      background-color:white;
+      border:solid 1px white;
+      border-radius:10px;   
+      padding: 5px;
+      height: 25px;
+      display: inline-block;
+      margin-left:78%;
+      margin-top: -72px;
+}  
+.botao{
+     padding: 8px;
+     display: flex;
+     margin-left:10%;
+     margin-top: 32px;
+}
+
+    
